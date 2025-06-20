@@ -7,6 +7,8 @@ namespace VendingMachineMVC.Models.Entities.Base
         [Required]
         public Guid Id { get; set; }
 
+        public int Positions { get; set; } = 0;
+
         public bool IsDisabled { get; set; } = false;
     }
 }

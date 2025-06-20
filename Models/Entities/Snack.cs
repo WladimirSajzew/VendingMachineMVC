@@ -7,13 +7,8 @@ namespace VendingMachineMVC.Models.Entities
     public class Snack : GoodBase
     {
         [Required]
-        public string Name { get; set; } = "";
-
-        [Required]
         public DateOnly ExpiryDate { get; set; } = new DateOnly();
 
-        [Column(TypeName = "decimal(18,2)")]
-        [Required]
-        public decimal Cost { get; set; }
+        public SlotBase? CurrentSlot { get; set; }
     }
 }

@@ -7,5 +7,7 @@ namespace VendingMachineMVC.Models.Entities
     {
         [Required]
         public int Position { get; set; } = 0;
+        
+        public GoodBase? CurrentGood { get; set; }
     }
 }
