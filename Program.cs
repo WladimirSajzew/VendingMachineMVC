@@ -1,4 +1,10 @@
+using Microsoft.EntityFrameworkCore;
+using VendingMachineMVC.Data;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<VendingDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("VendingDbContext") ?? throw new InvalidOperationException("Connection string 'VendingDbContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
