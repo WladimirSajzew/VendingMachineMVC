@@ -1,7 +1,11 @@
+using Microsoft.AspNetCore.Authentication.Negotiate;
 using Microsoft.EntityFrameworkCore;
 using VendingMachineMVC.Data;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddAuthentication(NegotiateDefaults.AuthenticationScheme)
+   .AddNegotiate();
 
 builder.Services.AddDbContext<VendingDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("VendingDbContext") ?? throw new InvalidOperationException("Connection string 'VendingDbContext' not found.")));
