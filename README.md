@@ -20,7 +20,40 @@ on this project i want to find out what technics better fits for a vending machi
 -ASP.NET Core MVC
 
 what is needed:
+
 -Buttons for select Item to buy
 
 -Sensors: DeliveryContainer-door, 
+
+
+
+1. Select item
+
+2. load item
+
+3. disable item-buttons
+
+4. enable coin-insert
+
+5. display price
+
+6. count coins
+
+7. disable coin insert
+
+8. activate MainModul to rotate motor
+
+9. stop rotate motor
+
+10. open item-cage
+
+11. item felt into delivery box
+
+12. open delivery box
+
+13. sensor delivery box
+
+14. close delivery boy
+
+15. enable item-buttons
 
